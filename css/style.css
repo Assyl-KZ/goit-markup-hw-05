@@ -317,6 +317,8 @@ img {
     width: 100%;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
     
 }
  .services_item_title {
@@ -330,7 +332,6 @@ img {
     color: var(--main_text_color_theme_light);
     text-align: center;
     height: 70px;
-    padding-top: 27px;
 }
 /* ======================================OUR TEAM===================================== */
 .team {
