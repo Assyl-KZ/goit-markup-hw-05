@@ -43,7 +43,18 @@ img {
 .link {
     text-decoration: none;
 }
-
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /* ===============================================HEADER========================================== */
 
 .site_nav_logo_img {
@@ -111,13 +122,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .site_nav_contact {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    align-items: center;
     font-family: var(--main_font);
     font-size: 14px;
     font-weight: 500;
@@ -139,14 +149,23 @@ img {
 .contact:focus {
     color: var(--accent_color);
 }
-.mail_header {
+.header.header_container {
+    position: relative;
     display: flex;
     align-items: center;
- justify-content: center;
+    justify-content: center;
+}
+.mail_thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 387px; */
 }
 .mail_link {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-right: 30px;
 }
 .phone_link {
     display: flex;
@@ -159,23 +178,28 @@ img {
     justify-content: center;
     margin-right: 10px;
     fill: var(--secondary_text_color_theme-dark);
-    /* left: 532px; */
+    left: 532px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .phone_icon {
     display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        fill: var(--secondary_text_color_theme-dark);
+        left: 532px;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.phone_link .phone_icon::before
+.phone_icon {
+    position: absolute;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
+    padding-right: 10px;
     fill: var(--secondary_text_color_theme-dark);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.mail_icon::before {
-    content: ;
-
-}
-
 .mail_link:hover .mail_icon,
 .mail_link:focus .mail_icon {
     fill: var(--accent_color);
